@@ -1,0 +1,47 @@
+.story{
+    
+    &_pictures{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        align-items: center;
+
+        background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url(https://images.unsplash.com/photo-1507546530-14a03f8d180a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=590&q=80);
+        grid-column: full-start / col-end 4;
+    }
+
+    &_img-1{
+        width: 100%;
+        transform: scaleX(-1);
+        box-shadow: 0 2rem 5rem rgba(black, .1);
+
+        grid-row: 2 / 6;
+        grid-column: 2 / 6;
+    }
+
+    &_img-2{
+        width: 115%;
+        z-index: 20;
+        box-shadow: 0 2rem 5rem rgba(black, .2);
+
+        grid-row: 4 / 6;
+        grid-column: 4 / 7;
+    }
+
+    &_content{
+        background-color:$color-grey-light-1;
+        grid-column: col-start 5 / -1;
+        padding: 6rem 8vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &_text{
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 4rem;
+    }
+}
